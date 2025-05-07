@@ -1,0 +1,233 @@
+/* Grid Container */
+.parent-rag {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 23px;
+    height: 85vh;
+    margin-top: 20px;
+}
+
+
+/* Cards with Exact Generator Positions + Debug Colors */
+.div1-rag {
+    grid-column: span 8 / span 8;
+    grid-row: span 4 / span 4;
+    grid-column-start: 4;
+    grid-row-start: 1;
+    padding: 40px;
+    display: flex;
+    font-family: 'Barlow', sans-serif;
+    position: relative;
+}
+.RAG-title {
+    font-size: 5.9rem;
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    background: linear-gradient(90deg, #008cea, #3b82f6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: right;
+    position: absolute; /*allows for the text to be on the side of the card where ever you want it to be*/
+    top: 50px;
+    right: 40px;
+}
+.RAG-corner-text {
+    position: absolute;
+    bottom: 50px;
+    right: 40px;
+    margin: 0;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    color: #566573;
+    text-align: right;
+}
+
+
+
+
+
+.div2-rag {
+    grid-column: span 5 / span 5;
+    grid-row: span 2 / span 2;
+    grid-column-start: 7;
+    grid-row-start: 5;
+    border-radius: 12px;
+    overflow: hidden;
+    /* Keeps image corners contained */
+    border-radius: 12px;
+    /* Match your card1 radius */
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+.div2-rag:hover .card-image {
+    transform: scale(1.08);
+    /* Now works for both cards */
+}
+.div2-rag:hover {
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3),
+        0 10px 20px -5px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02) translateY(-5px);
+}
+/*text hover*/
+.hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    
+    /* Text styling */
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+    
+    /* Overlay effects */
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    
+    /* Initially hidden */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .div2-rag:hover .hover-content {
+    opacity: 1; /* Reveal on hover */
+  }
+  /* Preserve your existing animations */
+  .div2-rag:hover .card-image {
+    transform: scale(1.08); 
+  }
+  .div2-rag:hover {
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3),
+                0 10px 20px -5px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02) translateY(-5px);
+  }
+  
+
+
+
+
+.div3-rag {
+    grid-column: span 3 / span 3;
+    grid-row: span 6 / span 6;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    overflow: hidden;
+    /* Keeps image corners contained */
+    border-radius: 12px;
+    /* Match your card1 radius */
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+.image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+/* Optional Hover Effect */
+.div3-rag:hover {
+    /* Glow + Shadow */
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3),
+        0 10px 20px -5px rgba(0, 0, 0, 0.1);
+
+    /* Card Expand */
+    transform: scale(1.02) translateY(-5px);
+}
+.card-image {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.div3-rag:hover .card-image {
+    /* Subtle Zoom */
+    transform: scale(1.08);
+}
+/* Bonus: Add smooth reveal for any overlay text */
+.image-container::after {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+.div3-rag:hover .image-container::after {
+    opacity: 1;
+}
+/*text hover*/
+.hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    
+    /* Text styling */
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+    
+    /* Overlay effects */
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    
+    /* Initially hidden */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .div3-rag:hover .hover-content {
+    opacity: 1; /* Reveal on hover */
+  }
+  /* Preserve your existing animations */
+  .div3-rag:hover .card-image {
+    transform: scale(1.08); 
+  }
+  .div3-rag:hover {
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3),
+                0 10px 20px -5px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02) translateY(-5px);
+  }
+  
+
+
+
+
+.div4-rag {
+    grid-column: span 3 / span 3;
+    grid-column-start: 4;
+    grid-row-start: 5;
+    display: flex;           /* Enables flex centering */
+    justify-content: center; /* Horizontal center */
+    align-items: center;     /* Vertical center */
+    padding-top: 18px;
+}
+
+
+.div5-rag {
+    grid-column: span 3 / span 3;
+    grid-column-start: 4;
+    grid-row-start: 6;
+    display: flex;           /* Enables flex centering */
+    justify-content: center; /* Horizontal center */
+    align-items: center;     /* Vertical center */
+    padding-bottom: 18px;
+}

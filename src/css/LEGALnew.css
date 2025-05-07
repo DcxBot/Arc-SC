@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400&display=swap');
+
+.parent-legal {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 23px;
+    height: 85vh;
+    margin-top: 20px;
+
+
+}
+
+/* Card styles with unique colors */
+.div1-legal {
+    grid-column: span 8 / span 8;
+    grid-row: span 4 / span 4;
+    border-radius: 12px;
+    padding: 40px;
+    display: flex;
+    font-family: 'Barlow', sans-serif;
+    position: relative;
+}
+
+.LEGAL-title {
+    font-size: 5.9rem;
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    background: linear-gradient(90deg, #008cea, #3b82f6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.LEGAL-corner-text {
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+    margin: 0;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    color: #566573;
+    text-align: left;
+}
+
+
+
+.div2-legal {
+    grid-column: span 8 / span 8;
+    grid-row: span 2 / span 2;
+    grid-column-start: 4;
+    grid-row-start: 5;
+    border-radius: 12px;
+    overflow: hidden;
+    /* Keeps image corners contained */
+    border-radius: 12px;
+    /* Match your card1 radius */
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+.div2-legal:hover .card-image {
+    transform: scale(1.08);
+    /* Now works for both cards */
+}
+.div2-legal:hover {
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3),
+        0 10px 20px -5px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02) translateY(-5px);
+}
+/*text hover*/
+.hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    
+    /* Text styling */
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+    
+    /* Overlay effects */
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    
+    /* Initially hidden */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .div2-legal:hover .hover-content {
+    opacity: 1; /* Reveal on hover */
+  }
+  /* Preserve your existing animations */
+  .div2-legal:hover .card-image {
+    transform: scale(1.08); 
+  }
+  .div2-legal:hover {
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3),
+                0 10px 20px -5px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02) translateY(-5px);
+  }
+
+
+
+.div3-legal {
+    grid-column: span 3 / span 3;
+    grid-row: span 4 / span 4;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+.image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+/* Optional Hover Effect */
+.div3-legal:hover {
+    /* Glow + Shadow */
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3),
+        0 10px 20px -5px rgba(0, 0, 0, 0.1);
+
+    /* Card Expand */
+    transform: scale(1.02) translateY(-5px);
+}
+.card-image {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.div3-legal:hover .card-image {
+    /* Subtle Zoom */
+    transform: scale(1.08);
+}
+/* Bonus: Add smooth reveal for any overlay text */
+.image-container::after {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+.div3-legal:hover .image-container::after {
+    opacity: 1;
+}
+/*text hover*/
+.hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+    
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    
+    /* Initially hidden */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .div3-legal:hover .hover-content {
+    opacity: 1; /* Reveal on hover */
+  }
+  /* Preserve your existing animations */
+  .div3-legal:hover .card-image {
+    transform: scale(1.08); 
+  }
+  .div3-legal:hover {
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3),
+                0 10px 20px -5px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02) translateY(-5px);
+  }
+
+
+
+
+.div4-legal {
+    grid-column: span 3 / span 3;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    display: flex;           /* Enables flex centering */
+    justify-content: center; /* Horizontal center */
+    align-items: center;     /* Vertical center */
+    padding-top: 18px;
+}
+
+.div5-legal {
+    grid-column: span 3 / span 3;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    display: flex;           /* Enables flex centering */
+    justify-content: center; /* Horizontal center */
+    align-items: center;     /* Vertical center */
+    padding-bottom: 18px;
+}
+
+.stroke-button {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600; /* Matches border thickness */
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    
+    /* Hollow Style */
+    background: transparent;
+    color:  #008cea; /* Match your gradient blue */
+    border: 3px solid currentColor; /* Border matches text color */
+    
+    /* Modern Proportions */
+    padding: 12px 24px 12px 24px;
+    border-radius: 50px; /* Capsule shape */
+    font-size: 1.2rem;
+    
+    /* Interaction */
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover/Active States */
+  .stroke-button:hover {
+    background: rgba(59, 130, 246, 0.08); /* Subtle tint */
+    transform: translateY(-1px);
+  }
+  
+  .stroke-button:active {
+    transform: translateY(0);
+    background: rgba(59, 130, 246, 0.2);
+  }
+

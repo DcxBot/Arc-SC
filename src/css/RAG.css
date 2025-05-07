@@ -1,0 +1,132 @@
+.rag-fullwidth-wrapper {
+    /* background-color: #fdfdfd; */
+    margin: 0 calc(-50vw + 50%); /* Magic edge-pull formula */
+    width: 100vw; /* Ensure full viewport width */
+    padding-bottom: 40px;
+  }
+
+/*stopping point*/
+
+.rag-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+    max-width: 1475px; /* Or your preferred max width */
+    margin: 0 auto; /* Centers the grid */
+  }
+  
+  .rag-item {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .rag-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .full-height {
+    grid-row: 1 / span 2;
+  }
+
+  .rag-item.full-height {
+    height: 665px; /* Adjust this value to your preferred height */
+  }
+
+/* Moves BOTH right-column images left */
+.rag-item:nth-child(3), /* Top-right image */
+.rag-item:last-child {  /* Bottom-right image */
+  margin-left: -80px; /* Adjust this value */
+  position: relative;
+  z-index: 1; /* Keeps them above other elements */
+}
+
+.rag-item:last-child {
+    height: 270px; /* Reduce height (adjust this value) */
+    overflow: hidden; /* Crop anything beyond container */
+  }
+
+  .rag-item:nth-child(2) {  /* Targets second grid item */
+    width: 83.2%; /* Reduce width (adjust %) */
+    height: 108%;
+    margin-right: -10%; /* Pull right edge leftward */
+    overflow: hidden; /* Clean crop */
+  }
+  
+  .rag-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 34px;
+  }
+
+  
+  .rag-buttons button {
+    background: #1f2937;
+    color: white;
+    font-weight: 600;
+    font-size: 2.0rem;
+    text-align: left;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    min-width: 400px;
+    min-height: 109px;
+    transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.3s ease;
+  }
+
+  .rag-buttons button:hover {
+    background: #374151;
+    transform: translateY(-2px);
+  }
+
+  
+  .overlay-text {
+    position: absolute;
+    color: #1a1a1a;
+    padding: 20px;
+  }
+  
+  .top-left {
+    top: 10px;
+    left: 10px;
+    text-align: left;
+  }
+  
+  .top-right {
+    top: 10px;
+    right: 10px;
+    text-align: right;
+  }
+  
+  .bottom-right {
+    bottom: 10px;
+    right: 10px;
+    text-align: right;
+  }
+  
+  .rag-item {
+    transition: transform 0.5s ease; /* Card lift */
+  }
+  
+  .rag-item img {
+    transition: transform 0.5s ease; /* Image zoom */
+  }
+  
+  /* Hover effects - matches legal bot perfectly */
+  .rag-item:hover {
+    transform: translateY(-8px); /* Card lift */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Shadow */
+    border-radius: 10px;
+  }
+  
+  .rag-item:hover img {
+    transform: scale(1.05); /* Image zoom */
+    filter: brightness(1.05); /* Subtle glow */
+  }

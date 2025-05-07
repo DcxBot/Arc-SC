@@ -1,0 +1,160 @@
+/* Global Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* General Page Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background: 
+    /* Grid overlay (light blue lines) */
+    linear-gradient(to right, rgb(255, 255, 255) 0.5px, transparent 0.5px),
+    linear-gradient(to bottom, rgb(255, 255, 255) 0.5px, transparent 0.5px),
+    /* Original gradient */
+    linear-gradient(to bottom, rgb(239, 239, 239) 0%, #d2eaf7 100%);
+  min-height: 100vh; /* Ensures gradient covers full viewport height */
+  margin: 0;
+  padding: 0;
+  padding-top: 48px; /* Add padding to the top of the body to prevent content from being hidden behind the sticky navbar */
+  padding-bottom: -20px; 
+
+  background-size: 
+  170px 170px, /* Grid square size */
+  170px 170px, 
+  50% 100%;
+}
+
+/* Navbar Styles */
+nav {
+  color: black;
+  padding: 10px 20px;
+  position: fixed; /* Make the navbar sticky */
+  top: 0; /* Stick to the top of the page */
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px; /* Add padding to the container if needed */
+}
+
+.company-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  
+}
+
+.nav-links ul li {
+  margin-left: 20px;
+  
+}
+
+/* Hover and Active Tab Styles */
+.hover-underline, .active-tab {
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+
+.hover-underline::after, .active-tab::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.hover-underline:hover::after {
+  transform: scaleX(1);
+}
+
+/* Active Tab Styles */
+
+.active-tab::after {
+  transform: scaleX(1); /* Permanent underline for active tab */
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none; /* Hidden by default on larger screens */
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: 20px; /* Add some margin to push it away from the edge */
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Show the hamburger menu on smaller screens */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white; /* White background for mobile menu */
+    width: 100%;
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Add shadow for mobile menu */
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links ul li {
+    margin: 20px 0;
+  }
+
+  .hamburger.open .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.open .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}

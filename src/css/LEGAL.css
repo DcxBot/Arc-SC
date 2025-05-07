@@ -1,0 +1,161 @@
+.legal-bot-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 17px;
+    padding: 25px;
+    /* background-color: #ffffff; */
+    flex-wrap: wrap;
+    margin: 0 calc(-50vw + 50%);
+    height: 88vh;
+
+}
+
+.left-column,
+.center-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.left-column {
+    flex: 1;
+    max-width: 280px;
+}
+
+.center-column {
+    flex: 2;
+    align-items: center;
+    height: 660px;
+    width: auto;
+    /* maintain image ratio */
+    max-width: 90%;
+    /* shrink image from left */
+    margin-left: 120px;
+    /* shift inward */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.crm-card-caption {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: white;
+}
+
+.right-column {
+    flex: 1;
+    max-width: 280px;
+    gap: 20px;
+}
+
+.cta-button {
+    background: #374151;
+    color: white;
+    font-weight: 600;
+    font-size: 2.0rem;
+    text-align: right;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    min-width: 400px;
+    min-height: 109px;
+    transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #1f2937;
+    transform: translateY(-2px);
+}
+
+.left-image-box,
+.center-image-box,
+.right-top,
+.right-bottom {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28); /* Bouncy lift */
+}
+
+.left-image-box img,
+.center-image-box img,
+.right-top img,
+.right-bottom img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.left-text,
+.center-text,
+.right-top-text {
+    position: absolute;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+}
+
+.center-heading h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.center-text h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ===== ZOOM ON HOVER EFFECT ===== */
+.left-image-box img,
+.center-image-box img,
+.right-top img,
+.right-bottom img {
+  transition: transform 0.5s ease; /* Smooth zoom animation */
+}
+
+.left-image-box:hover img,
+.center-image-box:hover img,
+.right-top:hover img,
+.right-bottom:hover img {
+  transform: scale(1.05); /* 5% zoom (adjust as needed) */
+}
+
+/* Optional: Add a slight brightness change for extra polish */
+.left-image-box:hover img,
+.center-image-box:hover img,
+.right-top:hover img,
+.right-bottom:hover img {
+  filter: brightness(1.02); /* Subtle highlight */
+}
+
+/* COMBO EFFECT ON HOVER */
+.left-image-box:hover,
+.center-image-box:hover,
+.right-top:hover,
+.right-bottom:hover {
+  transform: translateY(-8px); /* Lifts the entire card */
+}
+
+.left-image-box:hover img,
+.center-image-box:hover img,
+.right-top:hover img,
+.right-bottom:hover img {
+  transform: scale(1.05); /* Zoom image */
+  filter: brightness(1.05); /* Optional: Slight glow */
+}
+
+/* Shadow for depth */
+.left-image-box:hover,
+.center-image-box:hover,
+.right-top:hover,
+.right-bottom:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); 
+}

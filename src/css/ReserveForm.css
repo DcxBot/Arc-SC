@@ -1,0 +1,85 @@
+.form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.2s ease-out;
+  }
+
+  /*prevent body scrolling when form is open*/
+  body.form-open {
+    overflow: hidden;
+  }
+  
+  .form-container {
+    background: white;
+    padding: 50px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    height: 90%;
+    position: relative;
+    animation: fadeIn 0.3s ease-out;
+}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+  }
+  
+  input, textarea {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: 'Barlow', sans-serif;
+  }
+  
+  button[type="submit"] {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Reduced from 20px for better alignment */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #3b82f6;
+    width: 30px; /* Fixed width */
+    height: 30px; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Makes it circular */
+    transition: all 0.2s ease;
+    padding: 0; /* Remove default padding */
+  }
+  
+  .close-btn:hover {
+    background: rgba(59, 130, 246, 0.1); /* Subtle blue tint instead of white */
+    transform: scale(1.1); /* Slight grow effect */
+  }
+  
+  .success-message {
+    text-align: center;
+    padding: 40px;
+    font-family: 'Barlow';
+    color: #3b82f6;
+    font-weight: 500;
+  }

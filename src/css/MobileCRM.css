@@ -1,0 +1,56 @@
+@media (max-width: 450px) {
+
+    
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    gap: 8px;
+}
+    
+.div1 {
+    margin-top: 260px;
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+}
+.CRM-title {
+    margin-top: -410px;
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    background: linear-gradient(90deg, #008cea, #3b82f6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.div2 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-row-start: 4;
+    min-height: 50px;
+    margin-top: -30px;
+}
+
+.div3 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-row-start: 7;
+    min-height: 250px;
+
+}
+
+.div4 {
+    grid-column: span 2 / span 2;
+    grid-row-start: 10;
+}
+
+.div5 {
+    grid-column: span 2 / span 2;
+    grid-row-start: 11;
+}
+        
+
+}

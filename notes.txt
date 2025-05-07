@@ -1,0 +1,80 @@
+  /* hover stuff */
+.hover-scale {
+    transition: transform 0.3s ease; /* Smooth scaling */
+    display: inline-block; /* Ensures transform works properly */
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.01); /* Slightly enlarges the element */
+    cursor: pointer; /* Optional: Changes cursor to indicate click ability */
+  }
+
+  /*then add the 'hover-scale' as a class to the element you want the animation to be used on*/
+
+  -SC to be populated
+
+  -db,docs,test selection of docs
+
+  -need to get filter system working
+
+  -need to get upload system working with bulk doc upload
+
+  -arc tab with each 3 bots in them
+
+  -demo videos of the 3 bots on the website
+
+  -arc tab idea: button to send user to each web platform. button to send info to someone requesting info for a bots
+
+  -clarifying from arno: About arcana. discuss the chatbot on SC, functionality later on, simple chatbot for now?
+
+  -discuss data repo with arno
+
+  -can only upload one gig worth of documents, team is working on that
+
+  -arc is the name of the whole platform, and the store front
+
+  -arcana is the assistant for SC
+  
+  -authorization (Sign in with microsoft) feature, DCX user can view everything. guest users cannot upload, only view smaller/different buckets, compared to internal users
+
+  -internal users can upload, possible verification step for uploading, separate supabase repo before going into the main one
+
+  -role based features to be discussed with arno
+
+
+
+  2025/04/15
+  meeting notes, 
+  - SC page, items, add paragraph, and url to the items
+  - Must try to make it a grid of items asap (can be done later) after functionality
+  - bulk upload must have like a processing message, area for drag and drop
+  - may need to make a login and sign up page, further discussion with arno about login functionality
+
+
+ MEETING ntoes
+
+
+  .crm-card-caption {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: white;
+    font-Size: "4.4rem";
+    margin-Bottom: "0.5rem";
+    color: "#404040";
+    text-Align: "right";
+    font-Weight: 800;
+    background-Color: "white";
+    margin-Bottom: -20;
+    padding-Right: 22;
+    padding-Left: 22;
+    margin-Left: -20;
+    margin-Right: -20;
+    bottom: 20;
+    left: "auto";
+    right: 20;
+    top: "auto";
+    text-Align: "left";
+    background: "none";
+    padding: 0;
+  }

@@ -1,0 +1,175 @@
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    padding: 20px;
+    height: 150vh;
+    position: fixed;
+  }
+  
+  .sidebar h2 {
+    font-size: 18px;
+  }
+  
+  .filter-section {
+    margin-bottom: 20px;
+  }
+  
+  .filter-section h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  button {
+    width: 55%;
+    padding: 10px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+
+  /* Radio Button Styles */
+  .filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Adds space between checkboxes */
+    margin-left: 16px;
+    margin-top: 5px;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between checkbox and label */
+    padding: 4px 0; /* Vertical padding for each label */
+  }
+  
+  .checkbox-label input[type="checkbox"] {
+    margin: 0; /* Remove default margins */
+  }
+
+.filter-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+  
+  /* Main Content */
+  .main-content {
+     margin-left: 270px;
+    padding: 20px;
+    padding-left: 43px;
+  }
+  
+  .document-card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .document-card:hover {
+    transform: scale(1.01) translateY(-1px); /* Slightly grow and lift */
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+    z-index: 1; /* Ensures expanded card overlaps others */
+  }
+  
+  .document-card h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .document-card p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .tag {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin-right: 5px;
+  }
+  
+  .upload-button {
+    background-color: #3498db;
+  }
+  
+  .upload-button:hover {
+    background-color: #2980b9;
+  }
+  
+  /*Modal stuff*/
+  /* Modal Overlay */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Modal */
+  .modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .modal h3 {
+    margin-bottom: 20px;
+  }
+  
+  .modal input[type="file"] {
+    margin-bottom: 20px;
+  }
+  
+  .modal button {
+    margin: 5px;
+  }
+  
+  .close-modal {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .close-modal:hover {
+    background: #ff1a1a;
+  }
+  
+  .upload-button {
+    background: #0763f7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    max-width: 100px;
+  }
+  
+  .upload-button:hover {
+    background: #2980b9;;
+  }
