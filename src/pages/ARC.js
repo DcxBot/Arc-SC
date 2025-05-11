@@ -7,7 +7,7 @@ import img3 from "../images/img3.jpg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+// checking if .git is added and working
 // Import your components
 import CRMnew from "../components/CRMnew";
 import LEGALnew from "../components/LEGALnew";
