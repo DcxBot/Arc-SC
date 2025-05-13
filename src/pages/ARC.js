@@ -12,6 +12,8 @@ import "slick-carousel/slick/slick-theme.css";
 import CRMnew from "../components/CRMnew";
 import LEGALnew from "../components/LEGALnew";
 import RAGnew from "../components/RAGnew";
+
+
 const ARC = ({ openForm }) => {
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
   const [nextImageIndex, setNextImageIndex] = React.useState(1);
@@ -36,7 +38,7 @@ const ARC = ({ openForm }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 6500,
     arrows: false,
     pauseOnHover: false,
     cssEase: "cubic-bezier(0.4, 0.0, 0.2, 1)",

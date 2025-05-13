@@ -65,7 +65,10 @@ const CRMnew = ({ openForm }) => { // Receive openForm as prop
         </div>
 
         <div className="div5">
-          <button className="stroke-button">Demo</button>
+          <button 
+          className="stroke-button demo-button"
+          
+          >Demo</button>
         </div>
       </div>
     </>

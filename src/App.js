@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import ARC from './pages/ARC';
 import SolutionsCatalogue from './pages/solutionCatalogue';
 import ReserveForm from './components/ReserveForm'; // Add this import
+import ScrollToTop from './components/scrolltotop';
+
 
 function App() {
   // Add this state management for the form
@@ -18,6 +20,7 @@ function App() {
 
   return (
     <Router>
+        <ScrollToTop />
       <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <nav>
           <div className="nav-container">

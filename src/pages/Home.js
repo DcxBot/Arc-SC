@@ -5,6 +5,7 @@ import homeimg1 from '../images/homeimg1.jpg';
 import homeimg2 from '../images/homeimg2.jpg';
 import homeimg3 from '../images/homeimg3.jpg';
 
+
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [homeimg1, homeimg2, homeimg3];

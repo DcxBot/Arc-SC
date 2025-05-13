@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../css/solutionCatalogue.css";
 
+
 const documents = [
   {
     id: 1,
